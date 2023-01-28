@@ -1,0 +1,34 @@
+$gap: .75rem;
+$btnSize: 100px;
+
+.btnPanel {
+    display: grid;
+    grid: 'controls ops' auto
+            'numbers ops' auto / min-content;
+    grid-gap: $gap;
+}
+
+.controls {
+    grid-area: controls;
+    display: grid;
+    grid: auto-flow $btnSize / repeat(3, $btnSize);
+    grid-gap: $gap;
+}
+
+.ops {
+    grid-area: ops;
+    display: grid;
+    grid: auto-flow / $btnSize;
+    grid-gap: $gap;
+}
+
+.numbers {
+    grid-area: numbers;
+    display: grid;
+    grid: auto-flow $btnSize / repeat(3, $btnSize);
+    grid-gap: $gap;
+}
+
+.zero {
+    grid-column: 1 / 3;
+}
