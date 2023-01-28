@@ -4,11 +4,12 @@ import styles from './CircleButton.module.scss';
 
 type Props = {
   text: string;
+  className?: string;
 };
 
 const {btn} = styles;
-export const CircleButton = ({text}: Props) => {
+export const CircleButton = ({className, text}: Props) => {
   return (
-    <Button className={btn} variant='contained'>{text}</Button>
+    <Button className={[btn, className].join(' ')} variant='contained'>{text}</Button>
   );
 };
