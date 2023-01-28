@@ -1,0 +1,12 @@
+.out {
+    flex: 1;
+    height: 300px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 10px 50px;
+
+    span {
+        font-size: 6rem;
+    }
+}
