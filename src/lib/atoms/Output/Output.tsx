@@ -2,7 +2,7 @@ import * as React from 'react';
 import styles from './Output.module.scss';
 
 type Props = {
-  value: number;
+  value: string;
 };
 
 const {out} = styles
