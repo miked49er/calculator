@@ -28,9 +28,11 @@ export const Calculator = () => {
     let curNum = num.concat(nextInt)
 
     if (curNum.match(/^\./)) {
+      // Add '0' to front of num if starts with '.'
       curNum = `0${curNum}`;
     }
     else if (!curNum.match(/^0\./)) {
+      // Remove unnecessary leading '0'
       curNum = curNum.replace(/^0/, '');
     }
 
@@ -64,6 +66,7 @@ export const Calculator = () => {
     if (op === Op.EQUALS) {
       setOutput(calc.toString());
     } else {
+      // Display the whole operation instead of just the current number, like my phone's calculator app
       setOutput(op !== Op.NO_OP ? `${calc}${op}${num}` : num);
     }
   }, [calc, op, num]);
