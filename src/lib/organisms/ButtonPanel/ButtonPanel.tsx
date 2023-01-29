@@ -24,12 +24,14 @@ export const ButtonPanel = ({onNumberPress, onOpSelect, onReset}: Props) => {
           className={lightGrey}
           text='+ / -'
           click={() => {
+            // TODO toggle positive/negative
           }}
         />
         <CircleButton
           className={lightGrey}
           text='%'
           click={() => {
+            // TODO handle percentages
           }}
         />
       </div>
